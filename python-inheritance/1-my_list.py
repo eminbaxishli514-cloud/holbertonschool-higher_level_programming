@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Module that defines the MyList class which re-implements sorting manually."""
+"""Module that defines the MyList class with a custom sort implementation."""
 
 
 class MyList(list):
-    """Custom list class that can print itself sorted using manual recursion."""
+    """Class that inherits from list and prints a manually sorted version."""
 
     def _quicksort(self, data):
-        """Recursive quicksort implementation (no imports, no built-ins)."""
+        """Recursive quicksort algorithm implemented manually."""
         if len(data) < 2:
             return data
 
@@ -23,6 +23,6 @@ class MyList(list):
         return self._quicksort(smaller) + [pivot] + self._quicksort(greater)
 
     def print_sorted(self):
-        """Print the list sorted using the custom quicksort algorithm."""
-        sorted_list = self._quicksort(self[:])
-        print(sorted_list)
+        """Print a sorted version of the list using the custom quicksort."""
+        sorted_copy = self._quicksort(self[:])
+        print(sorted_copy)
