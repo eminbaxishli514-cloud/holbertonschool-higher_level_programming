@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-This module generates Pascal's triangle up to n rows.
+This module defines a function to generate Pascal's triangle.
 """
+
 
 def pascal_triangle(n):
     """
@@ -16,21 +17,22 @@ def pascal_triangle(n):
     if n <= 0:
         return []
 
-    triangle = [[1]]  # first row
+    triangle = [[1]]
 
     for i in range(1, n):
-        row = [1]  # first element
+        row = [1]
         for j in range(1, i):
-            # each element is sum of the two above
             row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
-        row.append(1)  # last element
+        row.append(1)
         triangle.append(row)
 
     return triangle
 
 
 if __name__ == "__main__":
-    # Test cases
-    for n in [5, 1, 0, 10, 100]:
+    # Example usage
+    test_values = [5, 1, 0, 10]
+    for n in test_values:
         print(f"n = {n}")
-        print(pascal_triangle(n))
+        for row in pascal_triangle(n):
+            print(row)
