@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """
-Script that adds command-line arguments to a Python list
+Script that adds all command-line arguments to a Python list
 and saves them to a JSON file.
 """
 
 import sys
-import json
 from save_to_json_file import save_to_json_file
 from load_from_json_file import load_from_json_file
 
