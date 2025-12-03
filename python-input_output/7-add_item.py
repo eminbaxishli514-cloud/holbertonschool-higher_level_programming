@@ -6,8 +6,12 @@ Uses load_from_json_file and save_to_json_file.
 
 import sys
 from pathlib import Path
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+
+load_module = __import__('6-load_from_json_file')
+load_from_json_file = load_module.load_from_json_file
+
+save_module = __import__('5-save_to_json_file')
+save_to_json_file = save_module.save_to_json_file
 
 file_name = "add_item.json"
 
