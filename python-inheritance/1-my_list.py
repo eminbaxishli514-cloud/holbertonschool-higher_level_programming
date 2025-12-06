@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-"""Defines a class MyList that inherits from list."""
+"""
+The programme return:
+- True
+- False
+"""
 
 
 class MyList(list):
-    """A list that can print itself sorted."""
-
+    """
+    class MyList
+    """
     def print_sorted(self):
-        """Prints the list in ascending order without modifying it."""
         print(sorted(self))
